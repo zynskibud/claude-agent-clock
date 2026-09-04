@@ -24,3 +24,8 @@ build/
 
 # Claude Code local state
 .claude/settings.local.json
+.claude/state/
+
+# Test / build artifacts
+coverage/
+packages/ts/dist/

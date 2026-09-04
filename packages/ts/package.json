@@ -1,0 +1,46 @@
+{
+  "name": "claude-agent-clock",
+  "version": "0.1.0",
+  "description": "Time-tick injection hook for the Claude Agent SDK and Claude Code. Fixes time-blindness in long-running agent sessions.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "example": "tsx examples/before-after.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "claude",
+    "anthropic",
+    "agent-sdk",
+    "claude-code",
+    "hook",
+    "system-reminder",
+    "time"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zynskibud/claude-agent-clock.git"
+  },
+  "homepage": "https://github.com/zynskibud/claude-agent-clock",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.5.0"
+  }
+}

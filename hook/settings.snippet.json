@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/repos/claude-agent-clock/hook/time-tick.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
